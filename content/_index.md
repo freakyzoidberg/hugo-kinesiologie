@@ -1,7 +1,7 @@
 ---
 title: "Marielle Le Goff"
 subtitle: "Kinésiologue"
-description: "# La kinésiologie peut vous aider:
+description: "## La kinésiologie peut vous aider:
 
 * mal-être, manque de confiance en soi...
 
