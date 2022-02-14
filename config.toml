@@ -27,7 +27,7 @@ preserveTaxonomyNames = true
   headingFontFamily = "sans-serif"
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
-  siteBgColor = "near-white"
+  siteBgColor = "light-gray"
   sidebarBgColor = "light-gray"
   headlineColor = "dark-pink"
   headingColor = "near-black"
