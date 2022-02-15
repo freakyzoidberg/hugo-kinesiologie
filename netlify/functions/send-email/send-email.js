@@ -11,10 +11,10 @@ const handler = async (event) => {
   const client = mailgun.client({username: 'api', key: API_KEY});
 
   const messageData = {
-    from: 'kinesiologie@kinesiologiereims.fr',
+    from: 'no-reply@kinesiologiereims.fr',
     to: 'pierre@lacave.me',
-    subject: 'Hello',
-    text: 'Testing some Mailgun awesomeness!'
+    subject: `message de ${body.name}`,
+    text: `${body.text} \n\n\nmail:${body.email}\ntel:${body.tel}`
   };
   
   try {
