@@ -1,4 +1,4 @@
-<form name="{{ .Title | lower }}-submission" id="contact-form" method="post" accept-charset="utf-8"  data-netlify="true">
+<form name="{{ .Title | lower }}-submission" id="contact-form" method="post" accept-charset="utf-8" onsubmit="return handleSubmit();">
   <fieldset id="{{ .Title | lower }}-inputs">
     <legend>{{ .Params.Name }}</legend>
     <label for="full-name">Full Name</label>
@@ -14,12 +14,8 @@
 </form>
 
 <script>
-  document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
-
 const handleSubmit = (e) => {
-  e.preventDefault();
+  if (e.preventDefault) e.preventDefault();
   let myForm = document.getElementById("contact-form");
   let formData = new FormData(myForm);
   fetch("/.netlify/functions/send-email", {
@@ -29,5 +25,6 @@ const handleSubmit = (e) => {
   })
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
+    return false;
 };
 </script>
