@@ -8,7 +8,7 @@
     <label for="tel">Numéro de téléphone</label>
     <input type="text" name="tel" id="tel" placeholder="0301020304" required>
     <label for="text">Message</label>
-    <textarea rows="6" name="text" id="text" placeholder="Description de votre demande de renseignements / rendez-vous" required></textarea>
+    <textarea rows="6" name="text" id="text" placeholder="Description de votre demande de renseignements et rendez-vous" required></textarea>
   </fieldset>
   <input type="submit" value="{{ if .Params.submit_button_label }}{{ .Params.submit_button_label }}{{ end }}">
 </form>
