@@ -5,8 +5,8 @@
     <input type="text" name="name" id="name" placeholder="Nom complet" required>
     <label for="email">Address Email</label>
     <input type="email" name="email" id="email" placeholder="votre@email.com" required>
-    <label for="text">Numéro de téléphone</label>
-    <input type="tel" name="tel" id="tel" placeholder="0301020304" required>
+    <label for="tel">Numéro de téléphone</label>
+    <input type="text" name="tel" id="tel" placeholder="0301020304" required>
     <label for="text">Message</label>
     <textarea rows="6" name="text" id="text" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required></textarea>
   </fieldset>
@@ -23,7 +23,7 @@ form.addEventListener('submit', event => {
   fetch("/.netlify/functions/send-email", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+    body: JSON.stringify(Object.fromEntries(formData)),
   })
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
