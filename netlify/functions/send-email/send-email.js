@@ -4,6 +4,7 @@ const Mailgun = require('mailgun.js');
 
 const mailgun = new Mailgun(formData);
 const API_KEY = process.env.MAILGUN_API_KEY;
+const DOMAIN = "kinesiologiereims.fr"
 
 const handler = async (event) => {
   const body = JSON.parse(event.body)
