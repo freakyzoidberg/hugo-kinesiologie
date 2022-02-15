@@ -18,14 +18,21 @@ const form = document.querySelector('form')
 form.addEventListener('submit', event => {
   // submit event detected
   event.preventDefault()
-  let myForm = document.getElementById("contact-form");
-  let formData = new FormData(myForm);
   fetch("/.netlify/functions/send-email", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: Object.fromEntries(formData),
+    body: {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      tel: document.getElementById("tel").value,
+      text: document.getElementById("text").value
+    },
   })
-    .then(() => console.log("Form successfully submitted"))
+    .then(() => {
+      console.log("Form successfully submitted"); 
+      alert('Message envoyé')
+      document.getElementById('contact-form').reset();
+    })
     .catch((error) => alert(error));
     return false;
 })
