@@ -38,8 +38,8 @@ form.addEventListener('submit', event => {
     }),
   })
   .then((response) => {
-    sending = false;
     if (response.ok) {
+      document.getElementById('contact-form').reset();
       return response.text();
     } else {
       throw new Error('Something went wrong');
@@ -47,15 +47,12 @@ form.addEventListener('submit', event => {
   })
   .then(() => {
     console.log("Form successfully submitted"); 
+    sending = false;
     alert('Message envoyé')
-    document.getElementById('contact-form').reset();
-    document.getElementById("name").reset();
-    document.getElementById("email").reset();
-    document.getElementById("tel").reset();
-    document.getElementById("text").reset();
   })
-  .catch((error) => alert(error));
-  }
+  .catch((error) => {
+    alert(error);
+  });
 
   return false;
 })
