@@ -16,6 +16,7 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
+    "form-data": "^4.0.0",
     "mailgun.js": "^4.2.1",
     "sendmail": "1.6.1"
   }
