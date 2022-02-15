@@ -31,12 +31,19 @@ form.addEventListener('submit', event => {
       text: document.getElementById("text").value
     }),
   })
-    .then(() => {
-      console.log("Form successfully submitted"); 
-      alert('Message envoyé')
-      document.getElementById('contact-form').reset();
-    })
-    .catch((error) => alert(error));
-    return false;
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Something went wrong');
+    }
+  })
+  .then(() => {
+    console.log("Form successfully submitted"); 
+    alert('Message envoyé')
+    document.getElementById('contact-form').reset();
+  })
+  .catch((error) => alert(error));
+  return false;
 })
 </script>
