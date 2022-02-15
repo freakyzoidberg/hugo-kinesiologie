@@ -22,10 +22,11 @@
         </form>
       </div>
       <div class="tc w-50-l">
-        <p class="f4 mv2 lh-copy black-50">1 boulevard Lundy,</p>
-        <p class="f4 mv2 lh-copy black-50">51100 Reims</p>
-        <p class="f4 mv2 lh-copy black-50">03 26 88 26 81</p>      
-        <div style="height: 276px;" id="savvyMapCanvas" class="google-map--contact"></div>
+          <div style="height: 380px;" id="savvyMapCanvas" class="google-map--contact"></div>
+          <br/>
+          <p class="f4 mv2 lh-copy black-50">1 boulevard Lundy,</p>
+          <p class="f4 mv2 lh-copy black-50">51100 Reims</p>
+          <p class="f4 mv2 lh-copy black-50">03 26 88 26 81</p>    
       </div>
     </div>
   </section>
@@ -78,7 +79,7 @@
   });
 </script>
 <script>
-window.document.onload = function(e){
+function initMap(e){
     const googleMapConfig = {
         // change map marker location here
         markerLocation: {
@@ -115,5 +116,7 @@ window.document.onload = function(e){
         position: markerPosition
     });
  }
+
 </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFc_lesBSZ98LUrL8JLc1ympTtA_DAHiA&callback=initMap"></script>
 {{ end }}
