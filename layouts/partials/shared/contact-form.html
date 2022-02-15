@@ -40,7 +40,7 @@ form.addEventListener('submit', event => {
   .then((response) => {
     sending = false;
     if (response.ok) {
-      return response.json();
+      return response.text();
     } else {
       throw new Error('Something went wrong');
     }
@@ -49,6 +49,10 @@ form.addEventListener('submit', event => {
     console.log("Form successfully submitted"); 
     alert('Message envoyé')
     document.getElementById('contact-form').reset();
+    document.getElementById("name").reset();
+    document.getElementById("email").reset();
+    document.getElementById("tel").reset();
+    document.getElementById("text").reset();
   })
   .catch((error) => alert(error));
   }
