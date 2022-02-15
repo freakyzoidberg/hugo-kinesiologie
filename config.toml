@@ -19,7 +19,7 @@ preserveTaxonomyNames = true
 [params]
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
-  description = "Marielle Le Goff, kinésiologue à Reims depuis 15 ans"
+  description = "Marielle Le Goff exercice la kinésiologie dans le centre de Reims depuis 20 ans et propose des séances pour les bébés, les enfants et les adultes"
   keywords= "kinésiologie,kinesiologie,kinésiologue,kinesiologue,marielle,le goff,reims,confiance en soi,peur,fatigue,dépendance,doutes,problèmes"
   # font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/

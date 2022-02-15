@@ -14,7 +14,7 @@ const handler = async (event) => {
     from: 'no-reply@kinesiologiereims.fr',
     to: 'pierre@lacave.me',
     subject: `message de ${body.name}`,
-    text: `${body.text} \n\n\nmail:${body.email}\ntel:${body.tel}`
+    text: `${body.text} \n\n\nmail: ${body.email}\ntel: ${body.tel}`
   };
   
   try {
