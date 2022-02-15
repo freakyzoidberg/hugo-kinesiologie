@@ -23,7 +23,7 @@ form.addEventListener('submit', event => {
   fetch("/.netlify/functions/send-email", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: JSON.stringify(Object.fromEntries(formData)),
+    body: Object.fromEntries(formData),
   })
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
