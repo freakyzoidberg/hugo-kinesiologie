@@ -18,6 +18,9 @@ const form = document.querySelector('form')
 var sending= false;
 
 form.addEventListener('submit', event => {
+  if (document.getElementById("name").value == "") {
+    return;
+  }
   event.preventDefault()
   if (sending == false) {
     sending = true;
