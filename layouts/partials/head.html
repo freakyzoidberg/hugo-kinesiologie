@@ -10,6 +10,7 @@
   <link rel="icon" href="{{ .Site.Params.favicon }}" type="image/x-icon">
   {{ $styles := resources.Get "scaffold.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  <meta name="google-site-verification" content="7YVl1cq4jLmRZ2x4BSRYEY6LlUY3izB-ejdlbCuezu8" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
