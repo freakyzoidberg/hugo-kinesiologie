@@ -7,10 +7,12 @@ const API_KEY = process.env.MAILGUN_API_KEY;
 const DOMAIN = "kinesiologiereims.fr"
 
 const handler = async (event) => {
-
+    const client = mailgun.client({username: 'api', key: API_KEY});
     try {
+	if (event.body === "") {
+	    return { statusCode: 200, body: 'Empty body' }
+	}
 	const body = JSON.parse(event.body)
-	const client = mailgun.client({username: 'api', key: API_KEY});
 	
 	const messageData = {
 	    from: 'no-reply@kinesiologiereims.fr',
