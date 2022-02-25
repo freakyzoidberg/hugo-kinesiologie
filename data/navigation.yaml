@@ -5,9 +5,9 @@ header:
   - name: Description
     title: Description
     url: /description/
-  - name: Histoire
-    title: Histoire
-    url: /histoire/
+  - name: Seance
+    title: Seance
+    url: /seance/
   - name: Contact
     title: Contact
     url: /contact/

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+    <section class="page-content mw9 center">
+        <div class="flex-l items-center">
+            <div class="mh5-l w-100-l">
+                {{ with .Params.title }}<h1 class="f2 f1-ns measure-narrow lh-solid">{{ . }}</h1>{{ end }}
+                <p class="f4 mv4 lh-copy black-50">Les séances se déroulent au cabinet et durent environ 1 heure.</p>
+                <p class="f4 mv4 lh-copy black-50">Je reçois sur rendez-vous du Lundi au Vendredi de 09:00 a 19:00.</p> 
+                <p class="f4 mv4 lh-copy black-50">Le prix d'une séance est de 60 euros, réglable par chèque ou en espéce.</p>
+                {{ if .Params.show_action_link }}<a class="action {{ .Params.action_type }}" href="{{ .Params.action_link }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
+            </div>
+        </div>
+    </section>
+</main>
+
+{{ end }}
+
+
